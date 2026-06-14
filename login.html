@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
     <style>
+        *{
+            font-family: Roboto, sans-serif;
+        }
         .card {
-            border: 2px solid red;
+            /* border: 2px solid red; */
             width: 20%;
             background-color: white;
             border-radius: 10px;
             padding: 20px;
+
+            /* x offset ,y offset blur ,size, colour*/
+           
+            box-shadow: 3px 3px 5px 0px  rgb(0, 0, 0);
         }
 
         body{
@@ -23,8 +32,47 @@
 
             height: 100vh;
 
-            background-color: gray;
+            background-color: lightgray;
 
+        }
+        .form-title{
+            text-align: center;
+            font-size: 24px;
+        }
+        .text-input{
+           display: block;
+           width: 100%;
+           padding: 10px 20px;
+           border-radius: 5px;
+           box-sizing: border-box;
+           margin-bottom: 30px;
+           margin-top: 5px;
+
+
+        }
+
+        .btn-submit{
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: violet;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .link{
+            text-decoration: none;
+            color: blueviolet;
+            display: block;
+            margin : 10px 0;
+        }
+        .forget-link{
+            text-align: right;
+        }
+        .signup-link{
+            text-align: center;
         }
     </style>
 
@@ -44,7 +92,11 @@
             <label for="">Password</label>
             <input class="text-input" type="password">
 
+            <a href="#" class="link forget-link">Forgot Password?</a>
+
             <button class="btn-submit">Submit</button>
+
+            <a href="#" class="link signup-link">Not registered yet? Sign up</a>
 
         </form>
 
