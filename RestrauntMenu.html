@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Restaurant Menu</title>
+  <style>
+   body 
+  
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: darkred;
+  margin-top: 10px;
+}
+
+    
+
+    
+    .menu-nav {
+      width: 200px;
+      padding: 20px;
+      background: #f8d7da;
+    }
+    .menu-nav h2 {
+      cursor: pointer;
+      margin: 15px 0;
+      color: darkred;
+    }
+
+    
+    .menu-content {
+      flex: 1;
+      padding: 20px;
+      background: #fff3cd;
+    }
+    .menu-section {
+      display: none;
+    }
+    .menu-section.active {
+      display: block;
+    }
+    li {
+      margin: 5px 0;
+    }
+    img {
+      width: 100px;
+      height: auto;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+    <body>
+  <div class="header">
+    <img src="logo.jpg.png" alt="Edible Delights Logo">
+    <h1>Edible Delights Menu</h1>
+  </div>
+
+  
+  
+  <div class="menu-nav">
+    <h2 onclick="showMenu('starters')">Starters</h2>
+    <h2 onclick="showMenu('main')">Main Course</h2>
+    <h2 onclick="showMenu('desserts')">Desserts</h2>
+    <h2 onclick="showMenu('drinks')">Drinks</h2>
+  </div>
+
+  
+  <div class="menu-content">
+    <div id="starters" class="menu-section">
+      <h3>Starters</h3>
+      <ul>
+        <li>Garlic Bread - $3 <img src="garlic.jpg" alt="Garlic Bread"></li>
+        <li>Tomato Soup - $4 <img src="t.jpg" alt="Tomato Soup"></li>
+        <li>Bruschetta - $5 <img src="bruchestta.jpg" alt="Bruschetta"></li>
+      </ul>
+    </div>
+
+    <div id="main" class="menu-section">
+      <h3>Main Course</h3>
+      <ul>
+        <li>Grilled Chicken - $12 <img src="gc.jpg" alt="Grilled Chicken"></li>
+        <li>Veggie Pasta - $10 <img src="vp.jpg" alt="Veggie Pasta"></li>
+        <li>Paneer Butter Masala - $11 <img src="pbm.jpg" alt="Paneer Butter Masala"></li>
+      </ul>
+    </div>
+
+    <div id="desserts" class="menu-section">
+      <h3>Desserts</h3>
+      <ul>
+        <li>Chocolate Cake - $6 <img src="cc.jpg" alt="Chocolate Cake"></li>
+        <li>Ice Cream Sundae - $5 <img src="is.jpg" alt="Ice Cream Sundae"></li>
+      </ul>
+    </div>
+
+    <div id="drinks" class="menu-section">
+      <h3>Drinks</h3>
+      <ul>
+        <li>Lemonade - $2 <img src="l.jpg" alt="Lemonade"></li>
+        <li>Mango Smoothie - $3 <img src="mango.jpg" alt="Mango Smoothie"></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showMenu(sectionId) {
+      
+      const sections = document.querySelectorAll('.menu-section');
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      // Show the clicked section
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
